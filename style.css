@@ -1,0 +1,81 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Định dạng Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 24px;
+}
+
+/* Định dạng Navbar */
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Flexbox container cho hàng nội dung */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các cột rớt dòng khi thiếu không gian */
+    margin-top: 10px;
+}
+
+/* Nội dung chính */
+.main-content {
+    flex: 70%; /* Chiếm 70% chiều rộng */
+    background-color: white;
+    padding: 20px;
+}
+
+/* Cột phụ */
+.sidebar {
+    flex: 30%; /* Chiếm 30% chiều rộng */
+    background-color: #e9e9e9;
+    padding: 20px;
+}
+
+/* Định dạng Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* ✅ ĐÂY LÀ PHẦN RESPONSIVE (RWD) */
+/* Áp dụng khi kích thước màn hình nhỏ hơn hoặc bằng 768px (Điện thoại/Tablet nhỏ) */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Đổi hướng Flexbox từ ngang sang dọc */
+    }
+
+    .navbar {
+        flex-direction: column; /* Navbar cũng xếp dọc trên mobile */
+    }
+}
